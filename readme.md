@@ -31,6 +31,14 @@ decompress('path/to/archive.zip', 'path/to/dest', (err) => {
 ```
 
 
+## API
+
+```js
+decompress(archive, dest, [flatten], cb)
+```
+
+
+
 ## Contributing
 
 If you have a question or have difficulties using `decompress-archive`, please double-check your code and setup first. If you think you have found a bug or want to propose a feature, refer to [the issues page](https://github.com/derhuerst/decompress-archive/issues).
