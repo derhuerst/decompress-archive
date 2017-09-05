@@ -23,5 +23,6 @@
 		"node": ">=6"
 	},
 	"dependencies": {
+		"any-shell-escape": "^0.1.1"
 	}
 }

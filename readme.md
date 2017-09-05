@@ -1,6 +1,12 @@
 # decompress-archive
 
-**Extract/decompress archives.** Node only.
+**Extract/decompress archives.** Uses native CLI tools such as `unzip` and `tar` and therefore only works in Node.js.
+
+Similar to [decompress](https://github.com/kevva/decompress#decompress-) and [compressjs](https://github.com/cscott/compressjs#compressjs). `decompress-archive` however
+
+- should be faster because it uses native `unzip` etc,
+- is more lightweight, but *does not* work in the browser,
+- has no command line interface.
 
 [![npm version](https://img.shields.io/npm/v/decompress-archive.svg)](https://www.npmjs.com/package/decompress-archive)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/decompress-archive.svg)
@@ -17,7 +23,11 @@ npm install decompress-archive
 ## Usage
 
 ```js
-todo
+const decompress = require('decompress-archive')
+
+decompress('path/to/archive.zip', 'path/to/dest', (err) => {
+	if (err) console.error(err)
+})
 ```
 
 
