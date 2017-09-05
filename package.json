@@ -1,0 +1,27 @@
+{
+	"name": "decompress-archive",
+	"description": "Extract/decompress archives. Node only.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"zip",
+		"unzip",
+		"tar",
+		"gz",
+		"gzip",
+		"tar.gz"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/decompress-archive",
+	"repository": "derhuerst/decompress-archive",
+	"bugs": "https://github.com/derhuerst/decompress-archive/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	}
+}
