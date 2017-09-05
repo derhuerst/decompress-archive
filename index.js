@@ -22,7 +22,10 @@ const cmds = { // signature: path, dest, filter
 			'-C', d, // destination dir
 			'-f', p // archive
 		]
-		if (f) cmd.push('--strip-components', '10') // flatten by 10 levels
+		if (f) {
+			if (f === true) f = 10
+			cmd.push('--strip-components', f + '') // flatten
+		}
 		return cmd
 	}
 }
@@ -37,7 +40,7 @@ const decompress = (src, dest, flatten, cb) => {
 	const file = path.basename(src)
 	const ending = endings.find(e => file.slice(-e.length) === e)
 	if (!ending) return Promise.reject(new Error('cannot decompress ' + file))
-	const cmd = cmds[ending](src, dest, !!flatten)
+	const cmd = cmds[ending](src, dest, flatten)
 
 	exec(esc(cmd), {stdio: 'ignore'}, (err) => cb(err))
 }
